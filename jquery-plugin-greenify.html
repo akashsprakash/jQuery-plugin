@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Plugin Greenify</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- jQuery plugin -->
+        <script src="js/jquery.greenify.js"></script>
+
+        <script>
+        $(document).ready(function(event){
+            $("#button1").click(function(){
+                $("h2").greenify();
+            });
+        });
+        </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div align="center">
+                <form>
+                    <input type="button" id="button1" value="jQuery">
+                    <h2>This is a jQuery example</h2>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

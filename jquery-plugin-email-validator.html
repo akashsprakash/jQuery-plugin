@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Plugin Email Validator</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- jQuery plugin -->
+        <script src="js/jquery.emailvalidator.js"></script>
+        <style>
+        .input-block
+        {
+            margin-top: 200px;
+        }
+        #validate
+        {
+            margin-top: 30px;
+        }
+        #result_block
+        {
+            margin-top: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row input-block" align="center">
+                <form>
+                    <input type="text" id="email" name="email-input" placeholder="Email">
+                    <br>
+                    <input class="btn btn-success" type="submit" id="validate" value="Validate">
+                    <div id="result_block">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("#validate").click(function(event){
+                event.preventDefault();
+                $("#email").verifyEmail({message: "#result_block"});
+            });
+        });
+    </script>
+</html>
